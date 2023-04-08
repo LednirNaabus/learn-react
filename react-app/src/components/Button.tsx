@@ -1,12 +1,18 @@
-import { Fragment } from "react";
+import { MouseEvent } from "react";
 
-function Button() {
-  return (
-    <Fragment>
-      <h1>Button Component</h1>
-      <button className="btn btn-primary">Log in</button>
-    </Fragment>
-  );
+interface ButtonProp {
+  color: string;
+  text: string;
+  onClick: () => void;
 }
+
+const Button = ({ color, text, onClick }: ButtonProp) => {
+  // let classNames = ["primary", "warning", "danger", "success"];
+  return (
+    <button className={"btn btn-" + color} onClick={onClick}>
+      {text}
+    </button>
+  );
+};
 
 export default Button;

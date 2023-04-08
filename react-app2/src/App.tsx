@@ -1,14 +1,12 @@
+import Person from "./components/Person";
+import Toolbar from "./components/Toolbar";
 import "./App.css";
 
-function Profile() {
-  return <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />;
-}
-
-export default function Gallery() {
+export default function App() {
   return (
-    <section>
-      <h1>Profile</h1>
-      <Profile />
-    </section>
+    <Toolbar
+      onPlayMovie={() => alert("Playing")}
+      onUploadImage={() => alert("Uploading")}
+    ></Toolbar>
   );
 }
